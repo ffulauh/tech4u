@@ -1,4 +1,4 @@
-package me.fullauh.javalang;
+package me.ffulauh.javalang;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

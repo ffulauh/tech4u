@@ -21,15 +21,31 @@ public class NetUtils {
     public static void main(String[] args)throws Exception {
 
         CloseableHttpClient httpClient= HttpClients.createDefault();
-        String hostIp="http://192.168.1.139";
-        String port="8080";
-        String requestUri="/api/v1/login/login";
-        String requestUrl=hostIp+":"+port+requestUri;
+        String localHostIp="http://192.168.1.139";
+        String remoteHostIp="http://47.93.155.23";
+        String developPort=":8080";
+        String releasePort="";
+        String apiVersion="/api/v1";
+
+        String loginUri="/login/login";
+        String logout="/login/logout";
+        String sendVCode="/login/sendVerificationCode";
+
+        String orderUri="/classorder/allOrder";
+
+        String schoolRecommend="/schools/recommend";
+
+
+
+        String requestUrl=localHostIp+developPort+apiVersion+logout;
         HttpPost httpPost=new HttpPost(requestUrl);
         List<NameValuePair> params=new ArrayList<NameValuePair>();
-        params.add(new BasicNameValuePair("phoneNumber","13572246203"));
+//        params.add(new BasicNameValuePair("phoneNumber","13572246203"));
         params.add(new BasicNameValuePair("verificationCode","111111"));
         params.add(new BasicNameValuePair("requestType","c2V0NTma8+I="));
+        params.add(new BasicNameValuePair("appUserId","29"));
+        params.add(new BasicNameValuePair("token","E/5e6EsalISlmBnoXl6MM1Aw4CGCQLr"));
+
         httpPost.setEntity(new UrlEncodedFormEntity(params));
         CloseableHttpResponse response=httpClient.execute(httpPost);
         HttpEntity entity=response.getEntity();

@@ -1,4 +1,4 @@
-package me.fullauh.javalang;
+package me.ffulauh.javalang;
 
 /**
  * Created by ffulauh on 2017/4/25.
