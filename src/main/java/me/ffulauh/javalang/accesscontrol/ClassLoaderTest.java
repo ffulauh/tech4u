@@ -1,8 +1,11 @@
-package me.ffulauh.javalang;
+package me.ffulauh.javalang.accesscontrol;
 
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * 自定义类加载器
+ */
 public class ClassLoaderTest {
     public static void main(String[] args)throws Exception {
         ClassLoader myLoader=new ClassLoader() {
@@ -23,14 +26,14 @@ public class ClassLoaderTest {
 
             }
         };
-        Object obj=myLoader.loadClass("me.ffulauh.javalang.ClassLoaderTest").newInstance();
+        Object obj=myLoader.loadClass("me.ffulauh.javalang.accesscontrol.ClassLoaderTest").newInstance();
         System.out.println(obj.getClass());
         //class me.ffulauh.javalang.ClassLoaderTest
         System.out.println(obj.getClass().getClassLoader());
         //me.ffulauh.javalang.ClassLoaderTest$1@d716361
-        System.out.println(me.ffulauh.javalang.ClassLoaderTest.class.getClassLoader());
+        System.out.println(ClassLoaderTest.class.getClassLoader());
         //sun.misc.Launcher$AppClassLoader@18b4aac2
-        System.out.println(obj instanceof me.ffulauh.javalang.ClassLoaderTest);
+        System.out.println(obj instanceof ClassLoaderTest);
         //false
         System.out.println(ClassLoader.getSystemClassLoader());
     }

@@ -1,4 +1,4 @@
-package me.ffulauh.learnjvm;
+package me.ffulauh.javalang.memory;
 
 import java.util.ArrayList;
 import java.util.List;
