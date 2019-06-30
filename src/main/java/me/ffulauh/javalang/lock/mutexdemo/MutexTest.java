@@ -11,7 +11,6 @@ public class MutexTest {
         lock.lock();
         try{
             System.out.println("aaaaaaaaaaaa");
-            lock.lock();
             lock.isLocked();
         }finally {
             lock.unlock();
