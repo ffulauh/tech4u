@@ -1,7 +1,9 @@
 package me.ffulauh.leetcode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Tree91 {
 
@@ -10,13 +12,17 @@ public class Tree91 {
         TreeNode node2=new TreeNode(2);
         root.right=node2;
         node2.left=new TreeNode(3);
+        long start= System.currentTimeMillis();
         System.out.println(inorderTraversal(root));
+        long end =System.currentTimeMillis();
+        System.out.println(end-start);
 
     }
 
 
+
     static List<Integer> inorderTraversal(TreeNode root){
-        List<Integer> result=new ArrayList<>();
+        List<Integer> result=new LinkedList<>();
         traversal(root,result);
         return result;
     }

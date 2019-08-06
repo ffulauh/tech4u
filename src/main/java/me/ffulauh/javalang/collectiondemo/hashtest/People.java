@@ -20,6 +20,7 @@ public class People {
 
     public static void main(String[] args) {
         Map<People,String> hehe=new HashMap<>();
+        People p1=new People("1",22);
         hehe.put(new People("1",24),"hehe");
         hehe.put(new People("2",48),"haha");
         System.out.println("hehe");
