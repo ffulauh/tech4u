@@ -1,4 +1,4 @@
-package me.ffulauh.javalang.lock.mutexdemo;
+package me.ffulauh.javalang.concurrent.lock.mutexdemo;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;

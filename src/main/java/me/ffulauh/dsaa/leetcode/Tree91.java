@@ -1,4 +1,4 @@
-package me.ffulauh.leetcode;
+package me.ffulauh.dsaa.leetcode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

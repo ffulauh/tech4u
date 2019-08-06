@@ -1,4 +1,4 @@
-package me.ffulauh.javalang.threaddemo.threadlocal;
+package me.ffulauh.javalang.concurrent.threaddemo.threadlocal;
 
 public class MeHolder {
     private static final ThreadLocal<Me> localMe=new ThreadLocal<>();

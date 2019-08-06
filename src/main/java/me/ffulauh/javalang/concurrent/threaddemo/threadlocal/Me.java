@@ -1,4 +1,4 @@
-package me.ffulauh.javalang.threaddemo.threadlocal;
+package me.ffulauh.javalang.concurrent.threaddemo.threadlocal;
 
 public class Me {
     private String name;

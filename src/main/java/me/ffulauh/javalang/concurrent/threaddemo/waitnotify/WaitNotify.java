@@ -1,8 +1,5 @@
-package me.ffulauh.javalang.threaddemo.waitnotify;
+package me.ffulauh.javalang.concurrent.threaddemo.waitnotify;
 
-import me.ffulauh.javalang.threaddemo.Interrupted;
-
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

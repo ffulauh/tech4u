@@ -1,4 +1,4 @@
-package me.ffulauh.javalang.threaddemo.threadlocal;
+package me.ffulauh.javalang.concurrent.threaddemo.threadlocal;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

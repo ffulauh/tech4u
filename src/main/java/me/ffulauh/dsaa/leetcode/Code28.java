@@ -1,4 +1,4 @@
-package me.ffulauh.leetcode;
+package me.ffulauh.dsaa.leetcode;
 
 public class Code28 {
     public static void main(String[] args) {

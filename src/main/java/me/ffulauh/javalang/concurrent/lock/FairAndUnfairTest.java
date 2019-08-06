@@ -1,4 +1,4 @@
-package me.ffulauh.javalang.lock;
+package me.ffulauh.javalang.concurrent.lock;
 
 import java.util.ArrayList;
 import java.util.Collection;

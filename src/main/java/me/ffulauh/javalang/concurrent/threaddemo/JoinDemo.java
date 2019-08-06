@@ -1,4 +1,4 @@
-package me.ffulauh.javalang.threaddemo;
+package me.ffulauh.javalang.concurrent.threaddemo;
 
 import java.util.Date;
 
