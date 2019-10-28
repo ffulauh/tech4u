@@ -24,7 +24,8 @@ public class RedisTest {
 //        jedis.lpush("list","listV1");
 //        jedis.lpush("list","listV2");
 //        jedis.lpush("list","listV3");
-//        List<String> list=jedis.lrange("list",0,-1);
+        List<String> list=jedis.lrange("list",0,-1);
+//        jedis.blpop()
 //        System.out.println(list);
 
         //set 包含字符串的无序收集器

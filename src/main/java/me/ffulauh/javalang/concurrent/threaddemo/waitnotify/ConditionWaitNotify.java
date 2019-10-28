@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class WaitNotify {
+public class ConditionWaitNotify {
 
 //    static Object lock=new Object();
     static Lock lock=new ReentrantLock();
@@ -25,9 +25,11 @@ public class WaitNotify {
         @Override
         public void run() {
 //            synchronized (lock){
-//            lock.lock();
+            lock.lock();
+            boolean ii=Thread.currentThread().isInterrupted();
                 System.out.println("我开始睡觉了");
-//                condition.awaitUninterruptibly();
+                //获取锁后才能调用，否则抛出非法监视器状态异常
+//            condition.awaitUninterruptibly();
 //                condition.awaitUntil(new Date())
                 try{
                     condition.await();
@@ -56,18 +58,16 @@ public class WaitNotify {
 //            }
 //            wait.interrupt();
 //            synchronized (lock){
-//                wait.interrupt();
             lock.lock();
-                try{
+            wait.interrupt();
+            try{
 //                    TimeUnit.SECONDS.sleep(2);
+                    //获取锁后才能调用，否则抛出非法监视器状态异常
                     condition.signal();
                 } finally {
                     lock.unlock();
                 }
-//                System.out.println("我换醒别的线程");
-//
-//            }
-//            System.out.println("heheh");
+
         }
     }
 }
